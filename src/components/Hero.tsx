@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Terminal, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Terminal, ShieldCheck, Zap, Download } from "lucide-react";
 import { personalInfo } from "../data/portfolioData";
 import GlowButton from "./UI/GlowButton";
 
@@ -45,7 +45,7 @@ export default function Hero() {
             <span className="h-2.5 w-2.5 rounded-full bg-accent-green animate-ping" />
             <span className="font-mono text-xs uppercase tracking-widest text-accent-green font-bold flex items-center gap-1.5">
               <Zap className="h-3.5 w-3.5 text-accent-cyan" />
-              ✦ Building intelligent software solutions...
+              Building intelligent software solutions...
             </span>
           </motion.div>
 
@@ -95,9 +95,15 @@ export default function Hero() {
               Contact Me
             </GlowButton>
             
-            {/* Disabled Resume Placeholder */}
-            <GlowButton variant="disabled" ariaLabel="Resume download not configured">
-              {personalInfo.resumePlaceholder}
+            {/* Download Resume Button */}
+            <GlowButton
+              href="/Mohammed_Sherif_Resume.pdf"
+              download="Mohammed_Sherif_Resume.pdf"
+              variant="primary"
+              ariaLabel="Download Mohammed Sherif Resume"
+              icon={<Download className="h-4 w-4" />}
+            >
+              Download Resume
             </GlowButton>
           </motion.div>
         </div>

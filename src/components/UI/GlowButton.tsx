@@ -12,6 +12,7 @@ interface GlowButtonProps {
   className?: string;
   icon?: ReactNode;
   ariaLabel?: string;
+  download?: boolean | string;
 }
 
 export default function GlowButton({
@@ -22,6 +23,7 @@ export default function GlowButton({
   className = "",
   icon,
   ariaLabel,
+  download,
 }: GlowButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center gap-2 px-6 py-3 font-orbitron text-xs uppercase tracking-wider rounded-md font-bold transition-all duration-300 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 select-none interactive cursor-pointer hover-lift shadow-sm";
@@ -63,11 +65,13 @@ export default function GlowButton({
 
   if (href) {
     const isExternal = href.startsWith("http") || href.startsWith("mailto");
-    if (isExternal) {
+    const isFile = href.endsWith(".pdf") || Boolean(download);
+    if (isExternal || isFile) {
       return (
         <motion.a
           {...motionProps}
           href={href}
+          download={download ? (typeof download === "string" ? download : true) : undefined}
           target={href.startsWith("mailto") ? undefined : "_blank"}
           rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
           aria-label={ariaLabel}

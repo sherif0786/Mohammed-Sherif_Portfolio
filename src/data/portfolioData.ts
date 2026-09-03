@@ -9,7 +9,8 @@ export interface PersonalInfo {
   github: string;
   linkedin: string;
   leetcode: string;
-  resumePlaceholder: string;
+  resumePlaceholder?: string;
+  resumeUrl?: string;
 }
 
 export interface SkillCategory {
@@ -81,7 +82,8 @@ export const personalInfo: PersonalInfo = {
   github: "https://github.com/sherif0786",
   linkedin: "https://www.linkedin.com/in/mohammed-sherif-u-80190a2b5",
   leetcode: "https://leetcode.com/u/Mohammedsherif/",
-  resumePlaceholder: "[RESUME DOWNLOAD — ADD FILE]",
+  resumePlaceholder: "Download Resume",
+  resumeUrl: "/Mohammed_Sherif_Resume.pdf",
 };
 
 export const aboutContent = {
