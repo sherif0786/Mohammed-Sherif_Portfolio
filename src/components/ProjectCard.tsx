@@ -113,21 +113,35 @@ export default function ProjectCard({ project, children }: ProjectCardProps) {
 
           {/* Actions Link Buttons */}
           <div className="flex flex-wrap gap-4 pt-2">
-            <GlowButton
-              variant="disabled"
-              icon={<GithubIcon className="h-4 w-4" />}
-              ariaLabel="GitHub Repository Unavailable"
-            >
-              GitHub (Not Available)
-            </GlowButton>
-            
-            <GlowButton
-              variant="disabled"
-              icon={<ExternalLink className="h-4 w-4" />}
-              ariaLabel="Live Demo URL Unavailable"
-            >
-              Live Demo (Not Available)
-            </GlowButton>
+            {project.github && project.github.startsWith("http") ? (
+              <GlowButton
+                href={project.github}
+                variant="primary"
+                icon={<GithubIcon className="h-4 w-4" />}
+                ariaLabel={`View ${project.name} on GitHub`}
+              >
+                View on GitHub
+              </GlowButton>
+            ) : (
+              <GlowButton
+                variant="disabled"
+                icon={<GithubIcon className="h-4 w-4" />}
+                ariaLabel="GitHub Repository Unavailable"
+              >
+                GitHub (Not Available)
+              </GlowButton>
+            )}
+
+            {project.demo && project.demo.startsWith("http") && (
+              <GlowButton
+                href={project.demo}
+                variant="secondary"
+                icon={<ExternalLink className="h-4 w-4" />}
+                ariaLabel={`View live demo of ${project.name}`}
+              >
+                Live Demo
+              </GlowButton>
+            )}
           </div>
         </div>
 

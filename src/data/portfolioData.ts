@@ -147,7 +147,7 @@ export const projects: Project[] = [
       "Designed responsive web interfaces using HTML, CSS, and JavaScript to provide a user-friendly experience across devices.",
       "Built automated resume screening and candidate matching features to improve recruitment efficiency and support data-driven hiring decisions.",
     ],
-    github: "[PROJECT GITHUB URL NOT PROVIDED]",
+    github: "https://github.com/sherif0786/AI-Career-Intelligence-Engine-Integration",
     demo: "[PROJECT LIVE DEMO URL NOT PROVIDED]",
     visualPlaceholder: "[PROJECT SCREENSHOT PLACEHOLDER]",
     image: "/images/project_career_ai.jpg",
@@ -200,8 +200,26 @@ export const projects: Project[] = [
     github: "[PROJECT GITHUB URL NOT PROVIDED]",
     demo: "[PROJECT LIVE DEMO URL NOT PROVIDED]",
     visualPlaceholder: "[PROJECT SCREENSHOT PLACEHOLDER]",
-    image: "/images/project_prijsm_v5.jpg"
-  }
+    image: "/images/project_prijsm_v5.jpg",
+  },
+  {
+    id: "developer-portfolio",
+    number: "03",
+    name: "Interactive Developer Portfolio",
+    fullName: "Next.js High-Performance Developer Portfolio & Showcase System",
+    description: "Modern, responsive portfolio web application engineered with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion, featuring custom interactive simulators and dynamic theme architecture.",
+    technology: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Lucide React", "Turbopack"],
+    highlights: [
+      "Engineered with modern responsive components, dark carbon styling, and dynamic canvas particle animations.",
+      "Built custom interactive simulation models and animated system architectures.",
+      "Integrated dynamic resume PDF downloading and verified production build optimizations.",
+      "Automated continuous deployment and version control with GitHub and Vercel."
+    ],
+    github: "https://github.com/sherif0786/Mohammed-Sherif_Portfolio",
+    demo: "https://github.com/sherif0786/Mohammed-Sherif_Portfolio",
+    visualPlaceholder: "[PORTFOLIO SHOWCASE]",
+    image: "/images/bg_dark_unique.jpg",
+  },
 ];
 
 export const experiences: Experience[] = [
